@@ -1,12 +1,26 @@
 package com.tp.day01;
 
+import io.restassured.response.Response;
+import org.junit.Test;
+import static io.restassured.RestAssured.given;
+
 public class GetRequest02 {
-    /*
-     Bir GET Request asagida verilen Endpoint'e yollanir
-     https://restful-booker.herokuapp.com/booking
-     status code 200'dur
-     a content type  "application/json" dir.
-   */
+     /*
+    https://restful-booker.herokuapp.com/booking url'ine
+    accept type'i "application/json" olan GET request'i yolladigimda
+    gelen response'un
+    status kodunun 200
+    content type'inin "application/json" oldugunu test edin
+     */
+    @Test
+    public void test01() {
+        String url = "https://restful-booker.herokuapp.com/booking";
+
+
+    }
+
+
+
     /*
     https://restful-booker.herokuapp.com/booking url'ine
     accept type'i "application/json" olan GET request'i yolladigimda
