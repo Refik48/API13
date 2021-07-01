@@ -30,8 +30,10 @@ public class GetRequest01 {
 
         // 3) Request gonder
         Response response = given().accept("application/json").when().get(url);
-        response.prettyPrint();
+        response.prettyPrint(); // request'ten gelen cevabi response icine aktardik.
+        // Oradan geleni yazdirmak icin bu komutu yazdim.
         // json formatinda sectim accept icinde.
+
         /*
             Given : Istenen endpoint sorgusundan once yapilacak gereklilikleri ifade eder.
             When : Kullanicinin aksiyonunu belirtir.
@@ -45,15 +47,16 @@ public class GetRequest01 {
         // body testi yapmadigim icin actual result'a gerek yoktur.
 
         // 5) Assertion islemini yapalim.
+        // Request'ten gelen cevabi assert ediyorum.
         response.then().assertThat().
                 statusCode(200).
                 contentType(ContentType.JSON).
                 statusLine("HTTP/1.1 200 OK");
 
-        System.out.println("status code : " + response.getStatusCode());
-        System.out.println(response.getStatusLine());
-        System.out.println(response.getHeaders());
-        System.out.println(response.getContentType());
+        System.out.println("Status code : " + response.getStatusCode());
+        System.out.println("Status line : " + response.getStatusLine());
+        System.out.println("Headers : " + response.getHeaders());
+        System.out.println("Content type : " + response.getContentType());
 
 
     }
