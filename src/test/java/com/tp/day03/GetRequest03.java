@@ -61,7 +61,8 @@ public class GetRequest03 extends TestBaseDummy {
         System.out.println("============================================================");
         List<Integer> yasList2 = json.getList("data.findAll{it.employee_age<30}.employee_age");
         System.out.println(yasList2);
-
+        Collections.sort(yasList2);
+        Assert.assertEquals(Integer.valueOf("23"),yasList2.get(yasList2.size()-1));
 
     }
 
