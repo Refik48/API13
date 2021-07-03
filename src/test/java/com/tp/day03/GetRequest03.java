@@ -64,6 +64,11 @@ public class GetRequest03 extends TestBaseDummy {
         Collections.sort(yasList2);
         Assert.assertEquals(Integer.valueOf("23"),yasList2.get(yasList2.size()-1));
 
+        System.out.println("============================================================");
+        List<String> salaryList = json.getList("data.findAll{it.employee_salary>350000}.employee_name");
+        System.out.println(salaryList);
+        Assert.assertTrue(salaryList.contains("Charde Marshall"));
+
     }
 
 }
