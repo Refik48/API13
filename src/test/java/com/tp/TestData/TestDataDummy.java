@@ -1,5 +1,7 @@
 package com.tp.TestData;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -59,5 +61,20 @@ public class TestDataDummy {
         expectedDataMap.put("status","success");
         expectedDataMap.put("message","Successfully! Record has been added.");
         return expectedDataMap;
+    }
+    public JSONObject day07DeleteRequest01SetUpMethod(){
+        /*
+        {
+ "status": "success",
+ "data": "2",
+ "message": "Successfully! Record has been deleted"
+}
+         */
+        JSONObject expectedData=new JSONObject();
+        expectedData.put("status","success");
+        expectedData.put("data","2");
+        expectedData.put("message","Successfully! Record has been deleted");
+        expectedData.put("statusCode",200);
+        return expectedData;
     }
 }

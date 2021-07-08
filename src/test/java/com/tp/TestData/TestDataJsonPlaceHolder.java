@@ -40,4 +40,18 @@ public class TestDataJsonPlaceHolder {
         requestBody.put("completed",false);
         return requestBody;
     }
+
+    public JSONObject day07PatchRequest01Method() {
+        JSONObject requestBody = new JSONObject();
+        requestBody.put("title","API calismaliyim");
+        return requestBody;
+    }
+
+    public void day07PatchRequest01ExpectedBodyMethod() {
+        JSONObject expedtedBody = new JSONObject();
+        expedtedBody.put("userId",10);
+        expedtedBody.put("title","API calismaliyim");
+        expedtedBody.put("completed",true);
+    }
+
 }
